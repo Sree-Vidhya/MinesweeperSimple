@@ -9,12 +9,12 @@ public class FieldLayout {
     public FieldLayout(String layout) {
         this.layout = layout;
     }
-    public int row(){
+    public int row(String layout){
         String[] fieldLayout = (layout.split(""));
         rows = Integer.parseInt(fieldLayout[0]);
         return rows;
     }
-    public int column(){
+    public int column(String layout){
         String[] fieldLayout = (layout.split(""));
         columns = Integer.parseInt(fieldLayout[1]);
         return columns;

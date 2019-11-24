@@ -29,12 +29,5 @@ public class Cell {
                 ", value=" + value +
                 '}';
     }
-    //    @Override
-//    public String toString() {
-//        if (isMine) {
-//            return "*";
-//        } else {
-//            return Integer.toString(value);
-//        }
-//    }
+
 }

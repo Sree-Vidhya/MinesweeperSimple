@@ -8,12 +8,12 @@ public class FieldLayoutTest {
     Field.FieldLayout fieldLayout = new Field.FieldLayout("35");
     @Test
     public void rowsReturnsNumberOfRowsFromTheInput() {
-        assertEquals(3,fieldLayout.row());
+        assertEquals(3,fieldLayout.row("35"));
     }
 
     @Test
     public void columnsReturnsNumberOfColumnsFromTheInput() {
-        assertEquals(5,fieldLayout.column());
+        assertEquals(5,fieldLayout.column("35"));
     }
 
     @Test
