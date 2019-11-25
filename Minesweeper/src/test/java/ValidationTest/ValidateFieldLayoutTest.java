@@ -4,9 +4,9 @@ import Input.UserInput;
 import Validation.ValidateFieldLayout;
 import org.junit.Test;
 import org.mockito.Mockito;
-
 import static org.junit.Assert.assertEquals;
 import static org.mockito.Mockito.when;
+
 public class ValidateFieldLayoutTest {
     UserInput mockUserInput = Mockito.mock(UserInput.class);
     ValidateFieldLayout validateFieldLayout = new ValidateFieldLayout(mockUserInput);

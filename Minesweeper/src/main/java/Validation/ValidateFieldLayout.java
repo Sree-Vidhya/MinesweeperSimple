@@ -1,5 +1,6 @@
 package Validation;
 
+
 import Input.UserInput;
 
 public class ValidateFieldLayout {

@@ -19,7 +19,7 @@ public class FieldLayout {
         columns = Integer.parseInt(fieldLayout[1]);
         return columns;
     }
-    public int totalCells(int rows,int columns){
+    public int totalCells(int rows, int columns){
         totalCells = rows * columns;
         return totalCells;
     }

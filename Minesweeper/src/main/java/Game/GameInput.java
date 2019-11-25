@@ -3,38 +3,49 @@ package Game;
 import Field.Cell;
 import Field.FieldLayout;
 import Input.UserInput;
-import Validation.ValidateCellInput;
 import Validation.ValidateFieldLayout;
+
+import java.util.ArrayList;
 
 public class GameInput {
     UserInput userInput ;
-    ValidateFieldLayout validateFieldLayout ;
+    ValidateFieldLayout validateFieldLayout;
     String layout;
     FieldLayout  fieldLayout = new FieldLayout(layout);
-    ValidateCellInput validateCellInput;
-    Cell cell;
-    int row,column,totalCells;
-    private Cell[][] field;
-
+    int rows,columns,totalCells;
+    Cell[][] matrix;
     public GameInput(UserInput userInput, ValidateFieldLayout validateFieldLayout) {
         this.userInput = userInput;
         this.validateFieldLayout = validateFieldLayout;
     }
-    private String validateLayoutInput(){
-        layout = validateFieldLayout.enterFieldLayout();
-        return layout;
-    }
     public int generateRows(String layout){
-        row = fieldLayout.row(layout);
-        return row;
+        rows = fieldLayout.row(layout);
+        return rows;
     }
     public int generateColumns(String layout){
-        column = fieldLayout.column(layout);
-        return column;
+        columns = fieldLayout.column(layout);
+        return columns;
     }
     public int generateTotalCells(int row,int column){
         totalCells = fieldLayout.totalCells(row,column);
         return totalCells;
     }
-
+    public void creatingField(ArrayList field, String layout) {
+        int rows = generateRows(layout);
+        int columns = generateColumns(layout);
+        int totalCells = generateTotalCells(rows,columns);
+        matrix = new Cell[rows][columns];
+        int cell = 0;
+        while (cell < totalCells) {
+            for (int row = 0; row < this.rows; row++) {
+                for (int column = 0; column < this.columns; column++) {
+                    matrix[row][column] = new Cell((String) field.get(cell));
+                    ++cell;
+                }
+            }
+        }
+    }
+    public Cell[][] getMatrix() {
+        return matrix;
+    }
 }
