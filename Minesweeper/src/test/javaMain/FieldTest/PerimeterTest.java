@@ -19,6 +19,6 @@ public class PerimeterTest {
 
     @Test
     public void returnsTotalCellsFromtheInput() {
-        assertEquals(15,perimeter.totalCells(3,5));
+        assertEquals(15,perimeter.totalCells("35"));
     }
 }
