@@ -13,7 +13,7 @@ public class GameBoard {
     public GameBoard(String layout) {
         rows = perimeter.row(layout);
         columns = perimeter.column(layout);
-        totalCells = perimeter.totalCells(rows,columns);
+        totalCells = perimeter.totalCells(layout);
     }
     public void creatingField(ArrayList field) {
         matrix = new Cell[rows][columns];

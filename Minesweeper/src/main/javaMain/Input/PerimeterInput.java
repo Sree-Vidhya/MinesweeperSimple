@@ -15,7 +15,7 @@ public class PerimeterInput {
 
         while(!(validatePerimeter.validateTheFormatandLength(fieldLayout) ))
         {
-            System.out.println("Not a Valid integer. Try Again!.");
+            System.out.println();
             fieldLayout = userInput.inputInNextLine();
         }
         return fieldLayout;

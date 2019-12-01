@@ -16,6 +16,6 @@ public class ValidatePerimeter {
     }
     public boolean validateTheFormatandLength(String inputToValidate)
     {
-        return (validateTheInput(inputToValidate));
+       return ((validateTheInput(inputToValidate)) && ((checkingifInputLengthIsTwo(inputToValidate))));
     }
 }

@@ -15,7 +15,6 @@ public class CellInput {
 
     public ArrayList<String> CreatingField(int totalNumberOfCells){
         String eachCell;
-//        System.out.println("Enter the Input for Each Cell: \n'.' for safe zone.\n'*' for mine zone");
         for(int i =0 ; i < totalNumberOfCells ; i++) {
             eachCell = userInput.inputInSameLine();
             while (!(validateCellInput.validateTheInput(eachCell))) {

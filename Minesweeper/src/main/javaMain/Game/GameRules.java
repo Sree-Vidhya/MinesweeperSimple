@@ -14,7 +14,7 @@ public class GameRules {
         this.gameBoard = gameBoard;
         rows = perimeter.row(layout);
         columns = perimeter.column(layout);
-        totalCells = perimeter.totalCells(rows,columns);
+        totalCells = perimeter.totalCells(layout);
         fieldCreated = gameBoard.getMatrix();
     }
 
@@ -56,7 +56,9 @@ public class GameRules {
         if (checkCellBottomRight(row,column)) fieldCreated[row][column].increaseValue();
         return fieldCreated;
     }
-    public String calculateAllCells(int rows,int columns) {
+    public String calculateAllCells(String layout) {
+        int rows = perimeter.row(layout);
+        int columns = perimeter.column(layout);
         StringBuilder sb = new StringBuilder();
         for (int row = 0; row < rows; row++) {
             for (int column = 0; column < columns; column++) {

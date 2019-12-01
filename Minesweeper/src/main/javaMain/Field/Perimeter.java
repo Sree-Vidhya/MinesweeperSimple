@@ -1,5 +1,6 @@
 package javaMain.Field;
 
+
 public class Perimeter {
     private String layout;
     private int rows;
@@ -10,17 +11,17 @@ public class Perimeter {
         this.layout = layout;
     }
     public int row(String layout){
-        String[] fieldLayout = (layout.split(""));
-        rows = Integer.parseInt(fieldLayout[0]);
-        return rows;
+            String[] fieldLayout = (layout.split(""));
+            rows = Integer.parseInt(fieldLayout[0]);
+            return rows;
     }
     public int column(String layout){
-        String[] fieldLayout = (layout.split(""));
-        columns = Integer.parseInt(fieldLayout[1]);
-        return columns;
+            String[] fieldLayout = (layout.split(""));
+            columns = Integer.parseInt(fieldLayout[1]);
+            return columns;
     }
-    public int totalCells(int rows, int columns){
-        totalCells = rows * columns;
+    public int totalCells(String layout){
+        totalCells = row(layout) * column(layout);
         return totalCells;
     }
 
