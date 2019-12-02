@@ -10,7 +10,7 @@ public class App {
         UserInput userInput = new UserInput();
         BoardInput boardInput = new BoardInput(userInput);
         CellInput cellInput = new CellInput(userInput);
-        MinesweeperGame minesweeperGame = new MinesweeperGame(userInput, boardInput,cellInput);
-        System.out.println(minesweeperGame.startGame(boardInput,cellInput));
+        MinesweeperGame minesweeper = new MinesweeperGame(userInput, boardInput,cellInput);
+        minesweeper.startGame(boardInput,cellInput);
     }
 }

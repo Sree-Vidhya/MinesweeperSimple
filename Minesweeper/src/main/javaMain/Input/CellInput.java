@@ -1,13 +1,13 @@
 package javaMain.Input;
 
-import javaMain.Validation.ValidateCellInput;
+import javaMain.Validation.ValidateCellInputImpl;
 
 import java.util.ArrayList;
 
 public class CellInput {
     private UserInput userInput;
     private ArrayList field = new ArrayList();
-    private ValidateCellInput validateCellInput = new ValidateCellInput();
+    private ValidateCellInputImpl validateCellInputImpl = new ValidateCellInputImpl();
 
     public CellInput(UserInput userInput) {
         this.userInput = userInput;
@@ -17,7 +17,7 @@ public class CellInput {
         String eachCell;
         for(int i =0 ; i < totalNumberOfCells ; i++) {
             eachCell = userInput.inputInSameLine();
-            while (!(validateCellInput.validateTheInput(eachCell))) {
+            while (!(validateCellInputImpl.validateTheInput(eachCell))) {
                 System.out.println("Not a Valid Input");
                 eachCell = userInput.inputInSameLine();
             }

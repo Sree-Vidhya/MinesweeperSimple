@@ -47,6 +47,7 @@ public class MinesweeperGame {
             boardInput = new BoardInput(userInput);
             gridInput = boardInput.enterPerimeter();
         }
+        System.out.println(sb.toString());
         return sb.toString();
     }
 

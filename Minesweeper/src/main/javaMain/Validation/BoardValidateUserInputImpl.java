@@ -1,6 +1,6 @@
 package javaMain.Validation;
 
-public class BoardValidateUserInput {
+public class BoardValidateUserInputImpl {
 
     public boolean validateTheInput(String inputToValidate) {
         try {
