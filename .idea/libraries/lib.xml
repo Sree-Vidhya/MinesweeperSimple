@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="lib">
+    <CLASSES>
+      <root url="file://$PROJECT_DIR$/Minesweeper/src/test/lib" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="file://$PROJECT_DIR$/Minesweeper/src/test/lib" />
+    </SOURCES>
+    <jarDirectory url="file://$PROJECT_DIR$/Minesweeper/src/test/lib" recursive="false" />
+    <jarDirectory url="file://$PROJECT_DIR$/Minesweeper/src/test/lib" recursive="false" type="SOURCES" />
+  </library>
+</component>
