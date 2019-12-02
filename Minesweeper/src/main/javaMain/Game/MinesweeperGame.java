@@ -25,7 +25,7 @@ public class MinesweeperGame {
         this.cellInput = cellInput;
     }
 
-    private void insideLoop(GameBoard gameBoard, Board board, String grid, CellInput cellInput, BoardInput boardInput){
+    private void insideLoop(GameBoard gameBoard, Board board,String grid, CellInput cellInput,BoardInput boardInput){
         cellInput = new CellInput(userInput);
         gameBoard = new GameBoard(grid);
         board = new Board();

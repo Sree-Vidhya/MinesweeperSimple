@@ -8,7 +8,6 @@ import javaMain.Input.UserInput;
 import org.junit.Test;
 import org.mockito.Mockito;
 
-import java.util.ArrayList;
 
 import static org.junit.Assert.assertEquals;
 import static org.mockito.Mockito.when;
@@ -21,14 +20,10 @@ public class MinesweeperGameTest {
     public void game() {
         MinesweeperGame minesweeperGame = new MinesweeperGame(userInput, boardInput,cellInput);
         when(boardInput.enterPerimeter()).thenReturn("22");
-        ArrayList testFieldContent = new ArrayList();
-        testFieldContent.add(".");
-        testFieldContent.add(".");
-        testFieldContent.add("*");
-        testFieldContent.add(".");
-        when(cellInput.CreatingField(4)).thenReturn(testFieldContent);
+    CellInput cellInput = Mockito.mock(CellInput.class);
         when(boardInput.enterPerimeter()).thenReturn("00");
         String expected= "Output:\n";
+        when(boardInput.enterPerimeter()).thenReturn("00");
         assertEquals(expected,minesweeperGame.startGame(boardInput,cellInput));
     }
 }
