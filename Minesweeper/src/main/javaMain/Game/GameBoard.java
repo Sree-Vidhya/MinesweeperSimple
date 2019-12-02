@@ -1,19 +1,19 @@
 package javaMain.Game;
 
 import javaMain.Field.Cell;
-import javaMain.Field.Perimeter;
+import javaMain.Field.Board;
 
 import java.util.ArrayList;
 
 public class GameBoard {
     private String layout;
-    private Perimeter perimeter = new Perimeter(layout);
+    private Board grid = new Board();
     private int rows,columns,totalCells;
    private Cell[][] matrix;
     public GameBoard(String layout) {
-        rows = perimeter.row(layout);
-        columns = perimeter.column(layout);
-        totalCells = perimeter.totalCells(rows,columns);
+        rows = grid.row(layout);
+        columns = grid.column(layout);
+        totalCells = grid.totalCells(layout);
     }
     public void creatingField(ArrayList field) {
         matrix = new Cell[rows][columns];

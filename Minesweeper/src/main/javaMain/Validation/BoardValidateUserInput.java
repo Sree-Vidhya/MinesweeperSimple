@@ -1,6 +1,6 @@
 package javaMain.Validation;
 
-public class ValidatePerimeter {
+public class BoardValidateUserInput {
 
     public boolean validateTheInput(String inputToValidate) {
         try {
@@ -16,6 +16,6 @@ public class ValidatePerimeter {
     }
     public boolean validateTheFormatandLength(String inputToValidate)
     {
-        return (validateTheInput(inputToValidate));
+       return ((validateTheInput(inputToValidate)) && ((checkingifInputLengthIsTwo(inputToValidate))));
     }
 }

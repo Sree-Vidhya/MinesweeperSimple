@@ -1,10 +1,10 @@
 package javaMain.Game;
 import javaMain.Field.Cell;
-import javaMain.Field.Perimeter;
+import javaMain.Field.Board;
 import java.util.ArrayList;
 public class GameRules {
     String layout;
-    Perimeter perimeter = new Perimeter(layout);
+    Board grid = new Board();
     GameBoard gameBoard;
     Cell[][] fieldCreated;
     int rows;
@@ -12,9 +12,9 @@ public class GameRules {
     int totalCells;
     public GameRules(GameBoard gameBoard, String layout, ArrayList fieldList) {
         this.gameBoard = gameBoard;
-        rows = perimeter.row(layout);
-        columns = perimeter.column(layout);
-        totalCells = perimeter.totalCells(rows,columns);
+        rows = grid.row(layout);
+        columns = grid.column(layout);
+        totalCells = grid.totalCells(layout);
         fieldCreated = gameBoard.getMatrix();
     }
 
@@ -56,7 +56,9 @@ public class GameRules {
         if (checkCellBottomRight(row,column)) fieldCreated[row][column].increaseValue();
         return fieldCreated;
     }
-    public String calculateAllCells(int rows,int columns) {
+    public String calculateAllCells(String layout) {
+        int rows = grid.row(layout);
+        int columns = grid.column(layout);
         StringBuilder sb = new StringBuilder();
         for (int row = 0; row < rows; row++) {
             for (int column = 0; column < columns; column++) {
